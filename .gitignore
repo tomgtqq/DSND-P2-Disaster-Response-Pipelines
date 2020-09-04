@@ -1,8 +1,9 @@
 
 .DS_Store
-categories.csv
-messages.csv
 .ipynb_checkpoints
 .ipynb_checkpoints/ETL Pipeline Preparation-checkpoint.ipynb
 .ipynb_checkpoints/ML Pipeline Preparation-checkpoint.ipynb
+categories.csv
+messages.csv
 Twitter-sentiment-self-drive-DFE.csv
+pickle_mlp_model.pkl
