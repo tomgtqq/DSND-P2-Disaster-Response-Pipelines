@@ -7,3 +7,4 @@ categories.csv
 messages.csv
 Twitter-sentiment-self-drive-DFE.csv
 pickle_mlp_model.pkl
+models/classifier.pkl

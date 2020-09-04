@@ -18,8 +18,6 @@ from sklearn.metrics import classification_report
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
-from sklearn.decomposition import TruncatedSVD
-from sklearn.neural_network import MLPClassifier
 
 import pickle
 
@@ -54,7 +52,7 @@ def build_model():
          'clf__estimator__n_estimators': [20, 50], 
          'clf__estimator__min_samples_split': [4, 6]
     }
-    cv = GridSearchCV(pipeline, param_grid=parameters)
+    cv = GridSearchCV(pipeline, param_grid=parameters, verbose = 4)
     
     return cv
 
