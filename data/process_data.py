@@ -4,21 +4,27 @@ from sqlalchemy import create_engine
 
 
 def load_data(messages_filepath, categories_filepath):
+    # load data
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
-    return messages.merge(categories, how = 'outer', on=['id']).sort_values(['id'])
+    # merge datasets
+    return messages.merge(categories, how = 'left', on=['id']).sort_values(['id'])
 
 def clean_data(df):
     # split categories into separate category columns
     categories = df['categories'].str.split(';' , expand=True)
+    # select the first row of the categories dataframe
     row = categories.iloc[0]
-    category_colnames = row.apply(lambda x: x[:-2]).tolist()
+    # use this row to extract a list of new column names for categories.
+    # one way is to apply a lambda function that takes everything 
+    # up to the second to last character of each string with slicing
+    category_colnames = row.transform(lambda x: x[:-2]).tolist()
     categories.columns = category_colnames
     
     # convert category values to just numbers 0 or 1
     for column in categories:
         # set each value to be the last character of the string
-        categories[column] = categories[column].str.slice(start=-1)
+        categories[column] = categories[column].transform(lambda x: x[-1:])
 
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
@@ -30,11 +36,12 @@ def clean_data(df):
     # remove duplicates
     df.drop_duplicates(inplace=True)
     
-    return df
+    # covert 'related' to binary 
+    return df[df['related'] != 2]
     
 def save_data(df, database_filename):
     engine = create_engine('sqlite:///{}'.format(database_filename))
-    df.to_sql('messages_table', engine, index=False)  
+    df.to_sql('messages_table', engine, index=False, if_exists='replace')  
 
 
 def main():
