@@ -46,7 +46,7 @@ The [Figure Eight (appen)](https://appen.com/) are providing pre-labeled tweets 
 </div>
 
 
-### Web UI
+### Web App
  An emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
 <div align="center">
 <img src="assets/disaster-response-web.png" height="200" width="400">
