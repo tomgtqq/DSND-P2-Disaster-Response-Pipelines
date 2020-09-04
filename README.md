@@ -1,4 +1,10 @@
 # Disaster Response Pipeline Project
+<div align="center">
+<img src="assets/disaster.png" height="200" width="400">
+</div>
+<div align="center">
+<u> **What should we do?** </u>
+</div>
 ### Table of Contents
 
 1. [Installation](#installation)
