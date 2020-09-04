@@ -16,6 +16,11 @@ The code should run with no issues using Python versions 3.*.
 $ pip install Flask
 ```
 
+[Installing scikit-learn](https://scikit-learn.org/stable/install.html)
+```
+pip install -U scikit-learn
+```
+
 ## Project Motivation<a name="motivation"></a>
 
 Folloing a disaster, typically there are millions and millions of communications either direct or via social media right at the time, When disaster response organizations have the least capacity to filter and then pull out the messages which are the most import. Usually different organizations will take care of different parts of the problem about water, blocked roads, medical supplies so on. So this classification problem is a type of supervised machine learning. 
