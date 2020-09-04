@@ -46,16 +46,16 @@ def tokenize(text):
 def build_model():
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer = tokenize)),
-        ('svd', TruncatedSVD()),
         ('tfidf', TfidfTransformer()),
-        ('clf', MultiOutputClassifier(MLPClassifier()))
+        ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
-    parameters = {
-     'clf__estimator__early_stopping': [False, True],
-     'clf__estimator__hidden_layer_sizes': [100, 200],
-     'clf__estimator__learning_rate_init': [0.001, 0.01]
+
+    parameters = {  
+         'clf__estimator__n_estimators': [20, 50], 
+         'clf__estimator__min_samples_split': [4, 6]
     }
     cv = GridSearchCV(pipeline, param_grid=parameters)
+    
     return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
