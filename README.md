@@ -1,4 +1,4 @@
-# Disaster Response Pipeline Project
+# Disaster Response Pipelines Project
 <div align="center">
 <img src="assets/disaster.png" height="200" width="400">
 </div>
