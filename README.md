@@ -1,4 +1,11 @@
-# Disaster Response Pipeline Project
+# Disaster Response Pipelines Project
+<div align="center">
+<img src="assets/disaster.png" height="200" width="400">
+</div>
+<div align="center">
+<u> **What should we do?** </u>
+</div>
+
 ### Table of Contents
 
 1. [Installation](#installation)
@@ -23,9 +30,9 @@ pip install -U scikit-learn
 
 ## Project Motivation<a name="motivation"></a>
 
-Folloing a disaster, typically there are millions and millions of communications either direct or via social media right at the time, When disaster response organizations have the least capacity to filter and then pull out the messages which are the most import. Usually different organizations will take care of different parts of the problem about water, blocked roads, medical supplies so on. So this classification problem is a type of supervised machine learning. 
+Following a disaster, typically there are millions and millions of communications either direct or via social media right at the time, When disaster response organizations have the least capacity to filter and then pull out the messages which are the most important. Usually, different organizations will take care of different parts of the problem of water, blocked roads, medical supplies so on. So this classification problem is a type of supervised machine learning.
 
-In this project I build an ETL Pipeline to repair the disasters dataset and an Machine Learning Pipeline to classifies disaster messages. Hence,the web app would be to categorize these messages into 36 categories,so that it can be understood what type of aid is necessary for a specific disaster.
+In this project, I build an ETL Pipeline to repair the disasters dataset and a Machine Learning Pipeline to classifies disaster messages. Hence, the web app would be to categorize these messages into 36 categories, so that it can be understood what type of aid is necessary for a specific disaster.
 
 ### Dataset
 
@@ -39,7 +46,7 @@ The [Figure Eight (appen)](https://appen.com/) are providing pre-labeled tweets 
 </div>
 
 
-### Web UI
+### Web App
  An emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
 <div align="center">
 <img src="assets/disaster-response-web.png" height="200" width="400">
