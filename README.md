@@ -20,7 +20,7 @@ The code should run with no issues using Python versions 3.*.
 
 [Installing Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask)
 ```
-$ pip install Flask
+pip install Flask
 ```
 
 [Installing scikit-learn](https://scikit-learn.org/stable/install.html)
